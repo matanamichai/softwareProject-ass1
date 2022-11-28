@@ -88,7 +88,6 @@ class Kmeans:
                     print(f"{k.m_kLocation[i]:.4f}",end=",")
                 else:
                     print(f"{k.m_kLocation[i]:.4f}")
-        print(self.m_bigestDif)
 
 
 class Center:
@@ -117,7 +116,8 @@ def main():
     kmeans = Kmeans(int(sys.argv[1]),sys.argv[3],int(sys.argv[2]))
     while not kmeans.isAlgoEnd():
         kmeans.iteration()
-
+    printCenters()
+    
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main()
