@@ -117,9 +117,7 @@ def getSysArgs():
     return sys.arg[1:]
 
 def main():
-    sysVar = getSysArgs()
-    kmeans = Kmeans(sysVar[0],sysVar[2],sysVar[1])
-    #kmeans = Kmeans(7,"input_2.txt")
+    kmeans = Kmeans(int(sys.argv[0]),sys.argv[2],int(sys.argv[1]))
     while not kmeans.isAlgoEnd():
         kmeans.iteration()
     kmeans.printCenters()
