@@ -116,7 +116,7 @@ def main():
     if(len(sys.argv) == 4):
         kmeans = Kmeans(int(sys.argv[1]),sys.argv[3],int(sys.argv[2]))
     else:
-        kmeans = Kmeans(int(sys.argv[1]),int(sys.argv[2]))
+        kmeans = Kmeans(int(sys.argv[1]),sys.argv[2])
 
     while not kmeans.isAlgoEnd():
         kmeans.iteration()
