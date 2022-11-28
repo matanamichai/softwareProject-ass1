@@ -113,7 +113,7 @@ class Center:
         self.m_kDataPoint.append(i_point)
 
 def main():
-    if(sys[3] != None):
+    if(len(sys.argv) == 4):
         kmeans = Kmeans(int(sys.argv[1]),sys.argv[3],int(sys.argv[2]))
     else:
         kmeans = Kmeans(int(sys.argv[1]),int(sys.argv[2]))
@@ -121,6 +121,7 @@ def main():
     while not kmeans.isAlgoEnd():
         kmeans.iteration()
     kmeans.printCenters()
+
     
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
